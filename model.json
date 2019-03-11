@@ -1,0 +1,268 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "tv control",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ActionIntent",
+                    "slots": [
+                        {
+                            "name": "action",
+                            "type": "actionType"
+                        }
+                    ],
+                    "samples": [
+                        "{action}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "NavigatorIntent",
+                    "slots": [
+                        {
+                            "name": "directionA",
+                            "type": "navigatorType"
+                        },
+                        {
+                            "name": "directionB",
+                            "type": "navigatorType"
+                        },
+                        {
+                            "name": "directionC",
+                            "type": "navigatorType"
+                        },
+                        {
+                            "name": "directionD",
+                            "type": "navigatorType"
+                        },
+                        {
+                            "name": "directionE",
+                            "type": "navigatorType"
+                        },
+                        {
+                            "name": "times",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "go {directionA} {directionB} {directionC} {directionD} {directionE}",
+                        "go {directionA} {directionB} {directionC} {directionD}",
+                        "go {directionA} {directionB} {directionC}",
+                        "go {directionA} {directionB}",
+                        "go {directionA}",
+                        "go {directionA} {times} times",
+                        "go {directionA} by {times}",
+                        "go {directionA} {times}"
+                    ]
+                },
+                {
+                    "name": "VolumeIntent",
+                    "slots": [
+                        {
+                            "name": "direction",
+                            "type": "directionType"
+                        },
+                        {
+                            "name": "adv",
+                            "type": "adv"
+                        },
+                        {
+                            "name": "number",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "volume {direction} {adv} {number}",
+                        "set volume {direction} {adv} {number}",
+                        "volume set {adv} {number}",
+                        "set volume {adv} {number}",
+                        "volume {adv} {number}",
+                        "volume {direction} {number}",
+                        "volume {number}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "actionType",
+                    "values": [
+                        {
+                            "id": "Assists",
+                            "name": {
+                                "value": "voice",
+                                "synonyms": [
+                                    "google",
+                                    "search"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "YoutubeKids",
+                            "name": {
+                                "value": "youtube kids"
+                            }
+                        },
+                        {
+                            "id": "Spotify",
+                            "name": {
+                                "value": "spotify"
+                            }
+                        },
+                        {
+                            "id": "Youtube",
+                            "name": {
+                                "value": "youtube"
+                            }
+                        },
+                        {
+                            "id": "Netflix",
+                            "name": {
+                                "value": "netflix"
+                            }
+                        },
+                        {
+                            "id": "Home",
+                            "name": {
+                                "value": "home"
+                            }
+                        },
+                        {
+                            "id": "Return",
+                            "name": {
+                                "value": "back",
+                                "synonyms": [
+                                    "return"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "Enter",
+                            "name": {
+                                "value": "enter"
+                            }
+                        },
+                        {
+                            "id": "Unmute",
+                            "name": {
+                                "value": "unmute"
+                            }
+                        },
+                        {
+                            "id": "Mute",
+                            "name": {
+                                "value": "mute",
+                                "synonyms": [
+                                    "be quiet",
+                                    "quiet",
+                                    "silent"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "PowerOff",
+                            "name": {
+                                "value": "power off",
+                                "synonyms": [
+                                    "sleep",
+                                    "shut down",
+                                    "turn off"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "PowerOn",
+                            "name": {
+                                "value": "power on",
+                                "synonyms": [
+                                    "turn on"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "navigatorType",
+                    "values": [
+                        {
+                            "id": "Right",
+                            "name": {
+                                "value": "right"
+                            }
+                        },
+                        {
+                            "id": "Left",
+                            "name": {
+                                "value": "left"
+                            }
+                        },
+                        {
+                            "id": "Down",
+                            "name": {
+                                "value": "down"
+                            }
+                        },
+                        {
+                            "id": "Up",
+                            "name": {
+                                "value": "up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "directionType",
+                    "values": [
+                        {
+                            "id": "-",
+                            "name": {
+                                "value": "down",
+                                "synonyms": [
+                                    "decrease"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "+",
+                            "name": {
+                                "value": "up",
+                                "synonyms": [
+                                    "increase"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "adv",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "to"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -95,6 +95,7 @@ const LaunchRequestHandler = {
     },
     handle(handlerInput) {
         const speechText = 'Now controlling your TV...';
+        callAPI(tvApi['PowerOn']);
         return handlerInput.responseBuilder
             .speak(speechText)
             .reprompt(speechText)
