@@ -5,7 +5,9 @@
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
-                    "samples": []
+                    "samples": [
+                        "bye bye"
+                    ]
                 },
                 {
                     "name": "AMAZON.HelpIntent",
@@ -101,6 +103,39 @@
                 {
                     "name": "actionType",
                     "values": [
+                        {
+                            "id": "FPTPlay",
+                            "name": {
+                                "value": "fpt play"
+                            }
+                        },
+                        {
+                            "id": "Pause",
+                            "name": {
+                                "value": "pause"
+                            }
+                        },
+                        {
+                            "id": "Stop",
+                            "name": {
+                                "value": "stop"
+                            }
+                        },
+                        {
+                            "id": "Prev",
+                            "name": {
+                                "value": "previous",
+                                "synonyms": [
+                                    "prev"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "Next",
+                            "name": {
+                                "value": "next"
+                            }
+                        },
                         {
                             "id": "Assists",
                             "name": {

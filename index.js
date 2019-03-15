@@ -2,7 +2,6 @@
 // Please visit https://alexa.design/cookbook for additional examples on implementing slots, dialog management,
 // session persistence, api calls, and more.
 
-
 const Alexa = require('ask-sdk-core');
 const request = require('request');
 const TV={
@@ -10,6 +9,7 @@ const TV={
     port:80,                    // public port of tv
     psk:"112689",               // pre-shared key from wifi (config in TV setting)
 };
+
 
 const BraviaRemoteControl = require('sony-bravia-tv-remote');
 const remote = new BraviaRemoteControl(TV.ip, TV.port, TV.psk);
@@ -39,6 +39,11 @@ const tvApi={
         service:'audio',
         method:'setAudioVolume',
         params: {target:'speaker', volume: '5'}
+    },
+    FPTPlay:{
+        service:'appControl', 
+        method:'setActiveApp',
+        params:{uri: 'com.sony.dtv.net.fptplay.ottbox.net.fptplay.ottbox.ui.activity.WelcomeActivity', data:''}
     },
     Youtube:{
         service:'appControl', 
@@ -120,12 +125,21 @@ const ActionIntentHandler = {
             remote.sendAction(code);
         else{
             callAPI(tvApi[code]);
+            
         }
-        speechText = currentValue.name;
-        return handlerInput.responseBuilder
+        if (code==='PowerOff'){
+            speechText = "Bye bye!";
+            return handlerInput.responseBuilder
             .speak(speechText)
-            .reprompt('Are you still there?')
             .getResponse();
+        }
+        else{
+            speechText = currentValue.name;
+            return handlerInput.responseBuilder
+                .speak(speechText)
+                .reprompt('Are you still there?')
+                .getResponse();
+        }
     }
 };
 

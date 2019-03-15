@@ -11,7 +11,8 @@
     "dependencies": {
       "ask-sdk-core": "^2.0.7",
       "ask-sdk-model": "^1.4.1",
-      "aws-sdk": "^2.326.0",
+      "aws-sdk": "^2.326.0",      
+      "dotenv": "^6.2.0",
       "sony-bravia-tv-remote":"^2.0.0",
       "request": "^2.88.0"
     }
