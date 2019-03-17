@@ -26,6 +26,7 @@
                         }
                     ],
                     "samples": [
+                        "open tv control and {action}",
                         "{action}"
                     ]
                 },
@@ -95,7 +96,12 @@
                         "set volume {adv} {number}",
                         "volume {adv} {number}",
                         "volume {direction} {number}",
-                        "volume {number}"
+                        "open tv control and volume {direction} {adv} {number}",
+                        "open tv control and set volume {direction} {adv} {number}",
+                        "open tv control and volume set {adv} {number}",
+                        "open tv control and set volume {adv} {number}",
+                        "open tv control and volume {adv} {number}",
+                        "open tv control and volume {direction} {number}"
                     ]
                 }
             ],
