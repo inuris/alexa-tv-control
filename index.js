@@ -5,9 +5,9 @@
 const Alexa = require('ask-sdk-core');
 const request = require('request');
 const TV={
-    ip:"inuris.freeddns.org",   // public ip of tv
-    port:80,                    // public port of tv
-    psk:"112689",               // pre-shared key from wifi (config in TV setting)
+    ip:"",   // public ip of tv
+    port:,                    // public port of tv
+    psk:"",               // pre-shared key from wifi (config in TV setting)
 };
 
 
